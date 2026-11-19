@@ -35,6 +35,11 @@ app.post("/mensagens", (req, res) => {
 });
 
 
+// - [SPRINT 06 - NOVO: interface web e arquivos estáticos] -
+// A rota GET / agora entrega public/index.html em vez da mensagem fixa.
+app.unsubscribe(express.static("Public"))
+
+
 // — [SPRINT 01 - ROTAS HERDADAS: /, /status, /sobre] —
 // Rotas da Sprint 01 - continuam disponíveis.
 app.get("/", (req, res) => res.send("Servidor rodando! 🚀"));
